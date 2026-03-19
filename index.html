@@ -131,16 +131,23 @@
 
             <!-- Hero Image and Text -->
             <div class="bg-gradient-to-r from-primary to-secondary rounded-2xl p-8 mb-12 text-white">
-                <div class="flex flex-col md:flex-row items-center">
-                    <div class="md:w-1/2 mb-6 md:mb-0">
+                <div class="flex items-center">
+                    <div class="w-1/2 pr-6">
                         <h2 class="text-3xl font-bold mb-4">Word vandaag een Helm-Held</h2>
                         <p class="text-lg mb-6">Het dragen van een helm gaat niet alleen om jouw bescherming - het is ook een voorbeeld voor anderen in jouw gemeenschap.</p>
-                        <button onclick="showSection('materials')" class="bg-white text-primary hover:bg-gray-100 font-semibold py-3 px-6 rounded-lg transition duration-300 flex items-center">
-                            <i class="fas fa-book-open mr-2"></i>Verken Materiaal
-                        </button>
+                        <div class="flex gap-4">
+                          <button onclick="showSection('materials')" class="bg-white text-primary hover:bg-gray-100 font-semibold py-3 px-6 rounded-lg transition duration-300 flex items-center">
+                              <i class="fas fa-book-open mr-2"></i>Verken Materiaal
+                          </button>
+                          <a href="https://raw.githubusercontent.com/bricebernaerts/helm-heroes.github.io/main/helm_heroes_consent_form.pdf" 
+                             download 
+                             class="bg-white text-primary hover:bg-gray-100 font-semibold py-3 px-6 rounded-lg transition duration-300 flex items-center">
+                              <i class="fas fa-download mr-2"></i>Toestemmings-formulier
+                          </a>
+                      </div>
                     </div>
-                    <div class="md:w-1/2 flex justify-center">
-                        <img src="https://uploads.onecompiler.io/44fwt7xkt/44gqj2vzh/istockphoto-1227630519-612x612.jpg" alt="Tiener met fietshelm" class="rounded-xl shadow-lg w-48 h-48 object-cover" />
+                    <div class="w-1/2 flex justify-center h-60 pl-12">
+                        <img src="https://uploads.onecompiler.io/44fwt7xkt/44gqj2vzh/istockphoto-1227630519-612x612.jpg" alt="Tiener met fietshelm" class="rounded-xl shadow-lg w-60 h-60 object-cover" />
                     </div>
                 </div>
             </div>
@@ -207,7 +214,7 @@
                         <a href="https://raw.githubusercontent.com/bricebernaerts/helm-heroes.github.io/main/PPT Verkeersveiligheid.pptx" download class="text-primary hover:text-secondary font-medium flex items-center">
                             <i class="fas fa-download mr-2"></i>PPT Verkeersveiligheid
                         </a> 
-                        <a href="https://raw.githubusercontent.com/bricebernaerts/helm-heroes.github.io/main/PPT scenarios.odt" download class="text-primary hover:text-secondary font-medium flex items-center">
+                        <a href="https://raw.githubusercontent.com/bricebernaerts/helm-heroes.github.io/main/PPT scenarios.pdf" download class="text-primary hover:text-secondary font-medium flex items-center">
                             <i class="fas fa-download mr-2"></i>PPT Hypotheses
                         </a> 
                         <a href="https://raw.githubusercontent.com/bricebernaerts/helm-heroes.github.io/main/PPT verliesframing.pptx" download class="text-primary hover:text-secondary font-medium flex items-center">
@@ -255,6 +262,8 @@
                 <div class="flex border-b border-gray-200 mb-8">
                     <button id="preTestTab" class="py-4 px-6 font-semibold text-primary border-b-2 border-primary" onclick="switchQuizTab('pre')">Pre-test</button>
                     <button id="postTestTab" class="py-4 px-6 font-semibold text-gray-500 hover:text-gray-700" onclick="switchQuizTab('post')">Post-test</button>
+                    <button id="feedbackTab" class="py-4 px-6 font-semibold text-gray-500 hover:text-gray-700" onclick="switchQuizTab('feedback')">Feedback</button>
+
                 </div>
                 <div id="preTestContent">
                     <div class="mb-8">
@@ -275,17 +284,32 @@
                 </div>
 
                 <div id="postTestContent" class="hidden">
-                    <div class="mb-8">
-                        <h3 class="text-xl font-semibold mb-4">Post-test Beveiliging</h3>
-                        <p class="text-gray-600 mb-6">Voer het wachtwoord in om toegang te krijgen tot de Post-test.</p>
-                        <div class="flex space-x-4">
-                            <input type="password" id="postPassword" placeholder="Voer wachtwoord in" class="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary" />
-                            <button onclick="validatePostPassword()" class="bg-accent hover:bg-orange-600 text-white font-semibold py-2 px-6 rounded-lg transition duration-300">
-                                Verzenden
-                            </button>
-                        </div>
+                  <div class="mb-8">
+                    <h3 class="text-xl font-semibold mb-4">Post-test Beveiliging</h3>
+                    <p class="text-gray-600 mb-6">Voer het wachtwoord in om toegang te krijgen tot de Post-test.</p>
+                    <div class="flex space-x-4">
+                      <input type="password" id="postPassword" placeholder="Voer wachtwoord in" class="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary" />
+                      <button onclick="validatePostPassword()" class="bg-accent hover:bg-orange-600 text-white font-semibold py-2 px-6 rounded-lg transition duration-300">
+                        Verzenden
+                      </button>
                     </div>
+                  </div>
                 </div>
+                
+                <!-- New Feedback Section -->
+                <div id="feedbackContent" class="hidden">
+                  <div class="mb-8">
+                    <h3 class="text-xl font-semibold mb-4">Feedback Beveiliging</h3>
+                    <p class="text-gray-600 mb-6">Voer het wachtwoord in om toegang te krijgen tot de Feedback.</p>
+                    <div class="flex space-x-4">
+                      <input type="password" id="feedbackPassword" placeholder="Voer wachtwoord in" class="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary" />
+                      <button onclick="validateFeedbackPassword()" class="bg-accent hover:bg-orange-600 text-white font-semibold py-2 px-6 rounded-lg transition duration-300">
+                        Verzenden
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
             </div>
         </section>
 
@@ -384,7 +408,7 @@
                 <div class="mb-8 ml-6">
                   <span class="absolute -left-4 w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white font-bold">1</span>
                   <h3 class="text-lg font-semibold text-gray-900 mb-1">Week 1</h3>
-                  <p class="text-gray-600">Pre-test,Fietsuitstap, Poster, Eerste les.</p>
+                  <p class="text-gray-600">Pre-test, Fietsuitstap, Poster, Eerste les, Beloning.</p>
                 </div>
                 <!-- Week 2 -->
                 <div class="mb-8 ml-6">
@@ -396,7 +420,7 @@
                 <div class="mb-8 ml-6">
                   <span class="absolute -left-4 w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white font-bold">3</span>
                   <h3 class="text-lg font-semibold text-gray-900 mb-1">Week 3</h3>
-                  <p class="text-gray-600">Fietsweek, Videos,</p>
+                  <p class="text-gray-600">Fietsweek, Videos.</p>
                 </div>
                 <!-- Week 4 -->
                 <div class="mb-8 ml-6">
@@ -504,29 +528,38 @@
             currentQuizTab = tab;
             const preTab = document.getElementById('preTestTab');
             const postTab = document.getElementById('postTestTab');
+            const feedbackTab = document.getElementById('feedbackTab');
             const preContent = document.getElementById('preTestContent');
             const postContent = document.getElementById('postTestContent');
-
-            if(tab === 'pre') {
+            const feedbackContent = document.getElementById('feedbackContent');
+        
+            preTab.className = 'py-4 px-6 font-semibold text-gray-500 hover:text-gray-700';
+            postTab.className = 'py-4 px-6 font-semibold text-gray-500 hover:text-gray-700';
+            feedbackTab.className = 'py-4 px-6 font-semibold text-gray-500 hover:text-gray-700';
+        
+            preContent.classList.add('hidden');
+            postContent.classList.add('hidden');
+            feedbackContent.classList.add('hidden');
+        
+            if (tab === 'pre') {
                 preTab.className = 'py-4 px-6 font-semibold text-primary border-b-2 border-primary';
-                postTab.className = 'py-4 px-6 font-semibold text-gray-500 hover:text-gray-700';
                 preContent.classList.remove('hidden');
-                postContent.classList.add('hidden');
-            } else {
-                preTab.className = 'py-4 px-6 font-semibold text-gray-500 hover:text-gray-700';
+            } else if (tab === 'post') {
                 postTab.className = 'py-4 px-6 font-semibold text-primary border-b-2 border-primary';
-                preContent.classList.add('hidden');
                 postContent.classList.remove('hidden');
+            } else if (tab === 'feedback') {
+                feedbackTab.className = 'py-4 px-6 font-semibold text-primary border-b-2 border-primary';
+                feedbackContent.classList.remove('hidden');
             }
         }
 
-        function validatePostPassword() {
-            const password = document.getElementById('postPassword').value;
-            if(password === 'helm123') { // Demo password
-                alert('Toegang verleend! U wordt nu doorgestuurd naar de post-test.');
-                window.location.href = 'posttest.html';
+        function validateFeedbackPassword() {
+            const password = document.getElementById('feedbackPassword').value;
+            if (password === 'feedback123') { // Set your desired password
+                alert('Toegang verleend! U wordt nu doorgestuurd naar de feedback pagina.');
+                window.location.href = 'feedback.html'; // Adjust URL accordingly
             } else {
-                alert('Onjuiste wachtwoord. Probeer opnieuw.');
+                alert('Onjuist wachtwoord. Probeer opnieuw.');
             }
         }
 
