@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Helm-Heroes</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <script>
         tailwind.config = {
             theme: {
@@ -53,7 +53,7 @@
         }
         .card-hover:hover {
             transform: translateY(-5px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04);
         }
         .notification {
             position: fixed;
@@ -63,7 +63,7 @@
             border-radius: 8px;
             color: white;
             font-weight: 500;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
             transform: translateY(100px);
             opacity: 0;
             transition: all 0.3s ease;
@@ -89,18 +89,17 @@
     </style>
 </head>
 <body class="bg-gray-50">
-    <!-- Navigatiebalk -->
+    <!-- Navigation Bar -->
     <nav class="bg-white shadow-lg sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16">
                 <div class="flex items-center">
-                    <!-- Logo ruimte -->
+                    <!-- Logo -->
                     <div class="flex-shrink-0 flex items-center mr-4">
                         <div class="w-12 h-12 rounded-full bg-gray-200 border-2 border-dashed border-gray-300 flex items-center justify-center">
-                        <img src="https://uploads.onecompiler.io/44fwt7xkt/44gkyn4ds/Logo-HelmHeroes.png" alt="Logo" class="w-10 h-10 rounded-full object-cover">
+                            <img src="https://uploads.onecompiler.io/44fwt7xkt/44gkyn4ds/Logo-HelmHeroes.png" alt="Logo" class="w-10 h-10 rounded-full object-cover" />
                         </div>
                     </div>
-                    <!-- Logo ruimte einde -->
                     <div class="flex-shrink-0 flex items-center">
                         <i class="fas fa-helmet-battle text-primary text-2xl mr-2"></i>
                         <span class="text-xl font-bold text-gray-800">Helm-Heroes</span>
@@ -109,7 +108,7 @@
                         <button onclick="showSection('home')" id="homeTab" class="text-gray-900 inline-flex items-center px-1 pt-1 text-sm font-medium active-tab">Home</button>
                         <button onclick="showSection('materials')" id="materialsTab" class="text-gray-500 hover:text-gray-700 inline-flex items-center px-1 pt-1 text-sm font-medium">Materiaal</button>
                         <button onclick="showQuizTabs()" class="text-gray-500 hover:text-gray-700 inline-flex items-center px-1 pt-1 text-sm font-medium">Pre-test</button>
-                        <button onclick="showSection('timeline')" class="text-gray-500 hover:text-gray-700 inline-flex items-center px-1 pt-1 text-sm font-medium">Tijdslijn</button>
+                        <button onclick="showSection('timeline')" id="timelineTab" class="text-gray-500 hover:text-gray-700 inline-flex items-center px-1 pt-1 text-sm font-medium">Tijdslijn</button>
                     </div>
                 </div>
                 <div class="flex items-center">
@@ -121,16 +120,16 @@
         </div>
     </nav>
 
-    <!-- Hoofdinhoud -->
+    <!-- Main Content -->
     <div id="content" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <!-- Startpagina Sectie -->
+        <!-- Home Section -->
         <section id="homeSection" class="fade-in">
             <div class="text-center mb-12">
                 <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Helm-Heroes</h1>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto">Veilig fietsen met een helm.</p>
             </div>
 
-            <!-- Hero Afbeelding Sectie -->
+            <!-- Hero Image and Text -->
             <div class="bg-gradient-to-r from-primary to-secondary rounded-2xl p-8 mb-12 text-white">
                 <div class="flex flex-col md:flex-row items-center">
                     <div class="md:w-1/2 mb-6 md:mb-0">
@@ -141,21 +140,19 @@
                         </button>
                     </div>
                     <div class="md:w-1/2 flex justify-center">
-                        <div class="flex flex-col md:flex-row items-center">
-                            <img src="https://uploads.onecompiler.io/44fwt7xkt/44gqj2vzh/istockphoto-1227630519-612x612.jpg" alt="Tiener met fietshelm" class="rounded-xl shadow-lg w-48 h-48 object-cover">
-                        </div>
+                        <img src="https://uploads.onecompiler.io/44fwt7xkt/44gqj2vzh/istockphoto-1227630519-612x612.jpg" alt="Tiener met fietshelm" class="rounded-xl shadow-lg w-48 h-48 object-cover" />
                     </div>
                 </div>
             </div>
 
-            <!-- Functies -->
+            <!-- Features -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
                 <div class="bg-white rounded-xl shadow-md p-6 text-center card-hover">
                     <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                         <i class="fas fa-video text-blue-600 text-2xl"></i>
                     </div>
                     <h3 class="font-bold text-lg mb-2">Educatieve Video's</h3>
-                    <p class="text-gray-600">Engelerende video inhoud die helpt bij het begrijpen van helmveiligheid en belangrijkheid.</p>
+                    <p class="text-gray-600">Engagerende video inhoud die helpt bij het begrijpen van helmveiligheid en belang.</p>
                 </div>
                 <div class="bg-white rounded-xl shadow-md p-6 text-center card-hover">
                     <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -181,13 +178,12 @@
             </div>
         </section>
 
-        <!-- Materiaal Sectie -->
+        <!-- Materials Section -->
         <section id="materialsSection" class="hidden fade-in">
             <div class="text-center mb-10">
                 <h2 class="text-3xl font-bold text-gray-900 mb-2">Educatieve Hulpmiddelen</h2>
                 <p class="text-gray-600 max-w-2xl mx-auto">Toegang tot onze interventiemiddelen.</p>
             </div>
-
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
                     <div class="bg-gradient-to-r from-blue-500 to-blue-600 h-32 flex items-center justify-center">
@@ -201,27 +197,24 @@
                         </button>
                     </div>
                 </div>
-
                 <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
-                      <div class="bg-gradient-to-r from-green-500 to-green-600 h-32 flex items-center justify-center">
-                          <i class="fas fa-file-powerpoint text-white text-4xl"></i>
-                      </div>
-                      <div class="p-6">
-                          <h3 class="font-bold text-xl mb-2">Powerpoint Presentaties</h3>
-                          <p class="text-gray-600 mb-4">Volledige Powerpoint presentaties voor de workshops.</p>
-                  
-                          <a href="https://docs.google.com/presentation/d/1xE_qcSnySUkrQlhuJ63tTsZ9Q4H2pS2XNVczp3z66fQ/view?usp=drive_link" target="_blank" class="text-primary hover:text-secondary font-medium flex items-center mb-2">
-                              <i class="fas fa-file-powerpoint mr-2"></i>PPT Verkeersveiligheid
-                          </a>
-                          <a href="https://drive.google.com/file/d/1Bou2WWF_zUeMSR0gBIURE4cx_l58rP15/view?usp=drive_link" target="_blank" class="text-primary hover:text-secondary font-medium flex items-center mb-2">
-                              <i class="fas fa-file-powerpoint mr-2"></i>PPT hypotheses
-                          </a>
-                          <a href="https://docs.google.com/presentation/d/1xE_qcSnySUkrQlhuJ63tTsZ9Q4H2pS2XNVczp3z66fQ/view?usp=drive_link" target="_blank" class="text-primary hover:text-secondary font-medium flex items-center">
-                              <i class="fas fa-file-powerpoint mr-2"></i>Presentatie kostenraming
-                          </a>
-                      </div>
-                  </div>
-
+                    <div class="bg-gradient-to-r from-green-500 to-green-600 h-32 flex items-center justify-center">
+                        <i class="fas fa-file-powerpoint text-white text-4xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2">Powerpoint Presentaties</h3>
+                        <p class="text-gray-600 mb-4">Volledige Powerpoint presentaties voor de workshops.</p>
+                        <a href="https://docs.google.com/presentation/d/1xE_qcSnySUkrQlhuJ63tTsZ9Q4H2pS2XNVczp3z66fQ/view?usp=drive_link" target="_blank" class="text-primary hover:text-secondary font-medium flex items-center mb-2">
+                            <i class="fas fa-file-powerpoint mr-2"></i>PPT Verkeersveiligheid
+                        </a>
+                        <a href="https://drive.google.com/file/d/1Bou2WWF_zUeMSR0gBIURE4cx_l58rP15/view?usp=drive_link" target="_blank" class="text-primary hover:text-secondary font-medium flex items-center mb-2">
+                            <i class="fas fa-file-powerpoint mr-2"></i>PPT hypotheses
+                        </a>
+                        <a href="https://docs.google.com/presentation/d/1xE_qcSnySUkrQlhuJ63tTsZ9Q4H2pS2XNVczp3z66fQ/view?usp=drive_link" target="_blank" class="text-primary hover:text-secondary font-medium flex items-center">
+                            <i class="fas fa-file-powerpoint mr-2"></i>Presentatie kostenraming
+                        </a>
+                    </div>
+                </div>
                 <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
                     <div class="bg-gradient-to-r from-purple-500 to-purple-600 h-32 flex items-center justify-center">
                         <i class="fas fa-book text-white text-4xl"></i>
@@ -230,11 +223,10 @@
                         <h3 class="font-bold text-xl mb-2">Handleiding Poster</h3>
                         <p class="text-gray-600 mb-4">Gedetailleerde handleiding over helmstandaarden en veiligheidspraktijken.</p>
                         <a href="https://docs.google.com/document/d/1fzikrADcTSMl8sPXO-oNGs3HPhb0YNBPjHOLNVvxWmA/edit?usp=drive_link" target="_blank" class="text-primary hover:text-secondary font-medium flex items-center mb-2">
-                              <i class="fas fa-file-powerpoint mr-2"></i>Handleiding Poster
-                          </a>
+                            <i class="fas fa-file-powerpoint mr-2"></i>Handleiding Poster
+                        </a>
                     </div>
                 </div>
-
                 <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
                     <div class="bg-gradient-to-r from-red-500 to-red-600 h-32 flex items-center justify-center">
                         <i class="fas fa-users text-white text-4xl"></i>
@@ -250,38 +242,31 @@
             </div>
         </section>
 
-        <!-- Quiz Tabs Sectie -->
+        <!-- Quiz Tabs Section -->
         <section id="quizTabsSection" class="hidden fade-in">
             <div class="text-center mb-10">
                 <h2 class="text-3xl font-bold text-gray-900 mb-2">Pre-test & Post-test</h2>
                 <p class="text-gray-600 max-w-2xl mx-auto">Selecteer een test om te starten</p>
             </div>
-
             <div class="max-w-3xl mx-auto bg-white rounded-xl shadow-md p-8">
                 <div class="flex border-b border-gray-200 mb-8">
                     <button id="preTestTab" class="py-4 px-6 font-semibold text-primary border-b-2 border-primary" onclick="switchQuizTab('pre')">Pre-test</button>
                     <button id="postTestTab" class="py-4 px-6 font-semibold text-gray-500 hover:text-gray-700" onclick="switchQuizTab('post')">Post-test</button>
                 </div>
-
                 <div id="preTestContent">
                     <div class="mb-8">
-                        <h3 class="text-xl font-semibold mb-4">Welkom bij de Pre-test</h3>
-                        <p class="text-gray-600 mb-6">Beantwoord de vragenlijst over je fietshelmgebruik.</p>
-                        <button onclick="checkPreTestPassword()" 
-                              class="bg-primary hover:bg-secondary text-white font-semibold py-3 px-8 rounded-lg transition duration-300">
-                          Start Pre-test
-                      </button>
+                        <h3 class="text-xl font-semibold mb-4">Online Pre-test</h3>
+                        <p class="text-gray-600 mb-6">Beantwoord online de vragenlijst over je fietshelmgebruik.</p>
+                        <button onclick="startPreTest()" class="bg-primary hover:bg-secondary text-white font-semibold py-3 px-8 rounded-lg transition duration-300">
+                            Start Pre-test
+                        </button>
                     </div>
-                    
-                    <!-- Download Buttons for Pre-test -->
                     <div class="mt-6 pt-6 border-t border-gray-200">
                         <h3 class="text-lg font-semibold mb-4 text-center">Download Pre-test Bestanden</h3>
                         <div class="flex flex-col sm:flex-row justify-center gap-4">
-                            <a href="https://drive.google.com/file/d/1DLB11cQLMZdyYjUEtt2ezdUR0zW-Qfyl/view?usp=drive_link" 
-                                   target="_blank"
-                                   class="flex items-center justify-center bg-primary hover:bg-secondary text-white font-medium py-2 px-6 rounded-lg transition duration-300">
-                                    <i class="fas fa-file-pdf mr-2"></i>Pre-test Vragen
-                                </a>
+                            <a href="https://drive.google.com/file/d/1DLB11cQLMZdyYjUEtt2ezdUR0zW-Qfyl/view?usp=drive_link" target="_blank" class="flex items-center justify-center bg-primary hover:bg-secondary text-white font-medium py-2 px-6 rounded-lg transition duration-300">
+                                <i class="fas fa-file-pdf mr-2"></i>Pre-test Vragen
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -291,7 +276,7 @@
                         <h3 class="text-xl font-semibold mb-4">Post-test Beveiliging</h3>
                         <p class="text-gray-600 mb-6">Voer het wachtwoord in om toegang te krijgen tot de Post-test.</p>
                         <div class="flex space-x-4">
-                            <input type="password" id="postPassword" placeholder="Voer wachtwoord in" class="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary">
+                            <input type="password" id="postPassword" placeholder="Voer wachtwoord in" class="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary" />
                             <button onclick="validatePostPassword()" class="bg-accent hover:bg-orange-600 text-white font-semibold py-2 px-6 rounded-lg transition duration-300">
                                 Verzenden
                             </button>
@@ -301,137 +286,131 @@
             </div>
         </section>
 
-        <!-- Pre-test Quiz Sectie -->
+        <!-- Pre-test Quiz Section -->
         <section id="preQuizSection" class="hidden fade-in">
             <div class="text-center mb-10">
                 <h2 class="text-3xl font-bold text-gray-900 mb-2">Pre-test Quiz</h2>
                 <p class="text-gray-600 max-w-2xl mx-auto">Beantwoord de vragenlijst over je fietshelmgebruik.</p>
             </div>
-
             <div class="max-w-3xl mx-auto bg-white rounded-xl shadow-md p-8">
-                <div class="mb-8">
-                    <h3 class="text-xl font-semibold mb-4">Vraag 1: Waarom is het dragen van een helm belangrijk?</h3>
-                    <div class="space-y-3">
-                        <label class="flex items-start space-x-3 cursor-pointer">
-                            <input type="radio" name="q1" class="mt-1">
-                            <span class="mt-1">Het houdt je warm tijdens koude weersomstandigheden</span>
-                        </label>
-                        <label class="flex items-start space-x-3 cursor-pointer">
-                            <input type="radio" name="q1" class="mt-1">
-                            <span class="mt-1">Het beschermt je hoofd tegen ernstige blessures</span>
-                        </label>
-                        <label class="flex items-start space-x-3 cursor-pointer">
-                            <input type="radio" name="q1" class="mt-1">
-                            <span class="mt-1">Het maakt je cool</span>
-                        </label>
-                        <label class="flex items-start space-x-3 cursor-pointer">
-                            <input type="radio" name="q1" class="mt-1">
-                            <span class="mt-1">Het is vereist door de wet voor alle fietsers</span>
-                        </label>
+                <form id="quizForm" class="space-y-8">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">Vraag 1: Waarom is het dragen van een helm belangrijk?</h3>
+                        <div class="space-y-3">
+                            <label class="flex items-start space-x-3 cursor-pointer">
+                                <input type="radio" name="q1" value="1" class="mt-1" required />
+                                <span class="mt-1">Het houdt je warm tijdens koude weersomstandigheden</span>
+                            </label>
+                            <label class="flex items-start space-x-3 cursor-pointer">
+                                <input type="radio" name="q1" value="2" class="mt-1" />
+                                <span class="mt-1">Het beschermt je hoofd tegen ernstige blessures</span>
+                            </label>
+                            <label class="flex items-start space-x-3 cursor-pointer">
+                                <input type="radio" name="q1" value="3" class="mt-1" />
+                                <span class="mt-1">Het maakt je cool</span>
+                            </label>
+                            <label class="flex items-start space-x-3 cursor-pointer">
+                                <input type="radio" name="q1" value="4" class="mt-1" />
+                                <span class="mt-1">Het is vereist door de wet voor alle fietsers</span>
+                            </label>
+                        </div>
                     </div>
-                </div>
 
-                <div class="mb-8">
-                    <h3 class="text-xl font-semibold mb-4">Vraag 2: Hoe vaak moet je je helm vervangen?</h3>
-                    <div class="space-y-3">
-                        <label class="flex items-start space-x-3 cursor-pointer">
-                            <input type="radio" name="q2" class="mt-1">
-                            <span class="mt-1">Elke 5 jaar ongeacht gebruik</span>
-                        </label>
-                        <label class="flex items-start space-x-3 cursor-pointer">
-                            <input type="radio" name="q2" class="mt-1">
-                            <span class="mt-1">Na elke impact of crash</span>
-                        </label>
-                        <label class="flex items-start space-x-3 cursor-pointer">
-                            <input type="radio" name="q2" class="mt-1">
-                            <span class="mt-1">Alleen wanneer hij begint er oud uit te zien</span>
-                        </label>
-                        <label class="flex items-start space-x-3 cursor-pointer">
-                            <input type="radio" name="q2" class="mt-1">
-                            <span class="mt-1">Elke keer wanneer je op een nieuwe fiets stapt</span>
-                        </label>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">Vraag 2: Hoe vaak moet je je helm vervangen?</h3>
+                        <div class="space-y-3">
+                            <label class="flex items-start space-x-3 cursor-pointer">
+                                <input type="radio" name="q2" value="1" class="mt-1" required />
+                                <span class="mt-1">Elke 5 jaar ongeacht gebruik</span>
+                            </label>
+                            <label class="flex items-start space-x-3 cursor-pointer">
+                                <input type="radio" name="q2" value="2" class="mt-1" />
+                                <span class="mt-1">Na elke impact of crash</span>
+                            </label>
+                            <label class="flex items-start space-x-3 cursor-pointer">
+                                <input type="radio" name="q2" value="3" class="mt-1" />
+                                <span class="mt-1">Alleen wanneer hij begint er oud uit te zien</span>
+                            </label>
+                            <label class="flex items-start space-x-3 cursor-pointer">
+                                <input type="radio" name="q2" value="4" class="mt-1" />
+                                <span class="mt-1">Elke keer wanneer je op een nieuwe fiets stapt</span>
+                            </label>
+                        </div>
                     </div>
-                </div>
 
-                <div class="mb-8">
-                    <h3 class="text-xl font-semibold mb-4">Vraag 3: Wat moet je zoeken bij het kopen van een helm?</h3>
-                    <div class="space-y-3">
-                        <label class="flex items-start space-x-3 cursor-pointer">
-                            <input type="radio" name="q3" class="mt-1">
-                            <span class="mt-1">De duurste optie</span>
-                        </label>
-                        <label class="flex items-start space-x-3 cursor-pointer">
-                            <input type="radio" name="q3" class="mt-1">
-                            <span class="mt-1">Goede pasvorm, certificering en comfort</span>
-                        </label>
-                        <label class="flex items-start space-x-3 cursor-pointer">
-                            <input type="radio" name="q3" class="mt-1">
-                            <span class="mt-1">De kleur die bij je fiets past</span>
-                        </label>
-                        <label class="flex items-start space-x-3 cursor-pointer">
-                            <input type="radio" name="q3" class="mt-1">
-                            <span class="mt-1">De nieuwste trendige stijl</span>
-                        </label>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">Vraag 3: Wat moet je zoeken bij het kopen van een helm?</h3>
+                        <div class="space-y-3">
+                            <label class="flex items-start space-x-3 cursor-pointer">
+                                <input type="radio" name="q3" value="1" class="mt-1" required />
+                                <span class="mt-1">De duurste optie</span>
+                            </label>
+                            <label class="flex items-start space-x-3 cursor-pointer">
+                                <input type="radio" name="q3" value="2" class="mt-1" />
+                                <span class="mt-1">Goede pasvorm, certificering en comfort</span>
+                            </label>
+                            <label class="flex items-start space-x-3 cursor-pointer">
+                                <input type="radio" name="q3" value="3" class="mt-1" />
+                                <span class="mt-1">De kleur die bij je fiets past</span>
+                            </label>
+                            <label class="flex items-start space-x-3 cursor-pointer">
+                                <input type="radio" name="q3" value="4" class="mt-1" />
+                                <span class="mt-1">De nieuwste trendige stijl</span>
+                            </label>
+                        </div>
                     </div>
-                </div>
 
-                <div class="text-center">
-                    <button class="bg-primary hover:bg-secondary text-white font-semibold py-3 px-8 rounded-lg transition duration-300">
-                        Beantwoordingen Indienen
-                    </button>
-                </div>
+                    <div class="text-center">
+                        <button type="submit" class="bg-primary hover:bg-secondary text-white font-semibold py-3 px-8 rounded-lg transition duration-300">
+                            Beantwoordingen Indienen
+                        </button>
+                    </div>
+                </form>
             </div>
         </section>
 
-        <!-- Tijdslijn Sectie -->
+        <!-- Timeline Section -->
         <section id="timelineSection" class="hidden fade-in">
             <div class="text-center mb-10">
                 <h2 class="text-3xl font-bold text-gray-900 mb-2">Tijdslijn</h2>
                 <p class="text-gray-600 max-w-2xl mx-auto">Bekijk de tijdslijn van de interventie.</p>
             </div>
-
             <div class="max-w-4xl mx-auto">
                 <div class="bg-white rounded-xl shadow-md p-8 text-center">
-                    <img src="https://uploads.onecompiler.io/44fwt7xkt/44gqj2vzh/Screenshot%202026-03-18%20at%2017.36.26.png" alt="Tijdslijn" class="mx-auto rounded-lg shadow-md">
+                    <img src="https://uploads.onecompiler.io/44fwt7xkt/44gqj2vzh/Screenshot%202026-03-18%20at%2017.36.26.png" alt="Tijdslijn" class="mx-auto rounded-lg shadow-md" />
                     <p class="mt-4 text-gray-600">De tijdslijn van de interventie wordt hier weergegeven.</p>
                 </div>
             </div>
         </section>
     </div>
 
-    <!-- Inlog Modal -->
+    <!-- Login/Registration Modal -->
     <div id="loginModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
         <div class="bg-white rounded-xl shadow-xl w-full max-w-md">
             <div class="p-6">
                 <div class="flex justify-between items-center mb-6">
-                    <h3 class="text-xl font-bold text-gray-900">Gebruikers Login</h3>
+                    <h3 id="modalTitle" class="text-xl font-bold text-gray-900">Gebruikers Login</h3>
                     <button onclick="closeModal()" class="text-gray-400 hover:text-gray-500">
                         <i class="fas fa-times"></i>
                     </button>
                 </div>
-                
-                <form id="signupForm" class="space-y-4">
-                    <div>
-                        <label for="signupEmail" class="block text-sm font-medium text-gray-700 mb-1">E-mail Adres</label>
-                        <input type="email" id="signupEmail" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary" placeholder="jouw@email.com">
-                    </div>
-                    <div>
-                        <label for="signupPhone" class="block text-sm font-medium text-gray-700 mb-1">Telefoon Nummer</label>
-                        <input type="tel" id="signupPhone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary" placeholder="+32 4XX XXX XXX" required>
-                    </div>
-                    <div>
-                        <label for="signupPassword" class="block text-sm font-medium text-gray-700 mb-1">Wachtwoord</label>
-                        <input type="password" id="signupPassword" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary" placeholder="••••••••">
-                    </div>
-                    <button type="submit" class="w-full bg-primary hover:bg-secondary text-white font-semibold py-3 px-4 rounded-lg transition duration-300">
-                        Aanmelden
-                    </button>
-                </form>
-                
-                <div class="mt-6">
-                    <p class="text-center text-sm text-gray-600">
-                        Heeft u al een account?
-                        <a href="#" class="font-medium text-primary hover:text-secondary ml-1">Inloggen</a>
+                <div id="formContainer">
+                    <form id="loginForm" class="space-y-4">
+                        <div>
+                            <label for="loginEmail" class="block text-sm font-medium text-gray-700 mb-1">E-mail Adres</label>
+                            <input type="email" id="loginEmail" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary" placeholder="jouw@email.com" required />
+                        </div>
+                        <div>
+                            <label for="loginPassword" class="block text-sm font-medium text-gray-700 mb-1">Wachtwoord</label>
+                            <input type="password" id="loginPassword" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary" placeholder="••••••••" required />
+                        </div>
+                        <button type="submit" class="w-full bg-primary hover:bg-secondary text-white font-semibold py-3 px-4 rounded-lg transition duration-300">
+                            Inloggen
+                        </button>
+                    </form>
+                    <p class="text-center text-sm text-gray-600 mt-4">
+                        Geen account?
+                        <button onclick="switchToRegister()" class="text-primary hover:text-secondary font-medium ml-1">Registreren</button>
                     </p>
                 </div>
             </div>
@@ -450,13 +429,11 @@
         function showNotification(message, type = 'success') {
             notification.textContent = message;
             notification.className = `notification ${type}`;
-            
-            // Show notification
+
             setTimeout(() => {
                 notification.classList.add('show');
             }, 10);
-            
-            // Hide after 3 seconds
+
             setTimeout(() => {
                 notification.classList.remove('show');
                 setTimeout(() => {
@@ -465,66 +442,63 @@
             }, 3000);
         }
 
+        // Navigation and section management
         function showSection(sectionId) {
-            // Verberg alle secties
-            document.getElementById('homeSection').classList.add('hidden');
-            document.getElementById('materialsSection').classList.add('hidden');
-            document.getElementById('quizTabsSection').classList.add('hidden');
-            document.getElementById('preQuizSection').classList.add('hidden');
-            document.getElementById('timelineSection').classList.add('hidden');
-            
-            // Toon geselecteerde sectie
+            ['homeSection', 'materialsSection', 'quizTabsSection', 'preQuizSection', 'timelineSection'].forEach(id => {
+                document.getElementById(id).classList.add('hidden');
+            });
             document.getElementById(sectionId + 'Section').classList.remove('hidden');
-            
-            // Update active tab
             updateActiveTab(sectionId);
-            
-            // Scroll naar boven
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
         function updateActiveTab(activeTabId) {
-            // Remove active class from all tabs
-            document.querySelectorAll('#homeTab, #materialsTab, #preTestTab, #postTestTab').forEach(tab => {
-                tab.classList.remove('active-tab');
+            const tabs = ['homeTab', 'materialsTab', 'preTestTab', 'postTestTab', 'timelineTab'];
+            tabs.forEach(t => {
+                const el = document.getElementById(t);
+                if(el) el.classList.remove('active-tab');
             });
-            
-            // Add active class to selected tab
-            if (activeTabId === 'home') {
+            if(activeTabId === 'home') {
                 document.getElementById('homeTab').classList.add('active-tab');
-            } else if (activeTabId === 'materials') {
+            } else if(activeTabId === 'materials') {
                 document.getElementById('materialsTab').classList.add('active-tab');
-            } else if (activeTabId === 'quizTabs') {
-                // Keep the tab active since it's already shown
-            } else if (activeTabId === 'timeline') {
-                document.getElementById('timelineTab').classList.add('active-tab');
+            } else if(activeTabId === 'quizTabs') {
+                if(document.getElementById('preTestTab')) document.getElementById('preTestTab').classList.add('active-tab');
+            } else if(activeTabId === 'timeline') {
+                const timelineTab = document.getElementById('timelineTab');
+                if (timelineTab) timelineTab.classList.add('active-tab');
             }
         }
 
         function showQuizTabs() {
             showSection('quizTabs');
+            switchQuizTab('pre');
         }
 
         function switchQuizTab(tab) {
             currentQuizTab = tab;
-            if (tab === 'pre') {
-                document.getElementById('preTestTab').className = 'py-4 px-6 font-semibold text-primary border-b-2 border-primary';
-                document.getElementById('postTestTab').className = 'py-4 px-6 font-semibold text-gray-500 hover:text-gray-700';
-                document.getElementById('preTestContent').classList.remove('hidden');
-                document.getElementById('postTestContent').classList.add('hidden');
+            const preTab = document.getElementById('preTestTab');
+            const postTab = document.getElementById('postTestTab');
+            const preContent = document.getElementById('preTestContent');
+            const postContent = document.getElementById('postTestContent');
+
+            if(tab === 'pre') {
+                preTab.className = 'py-4 px-6 font-semibold text-primary border-b-2 border-primary';
+                postTab.className = 'py-4 px-6 font-semibold text-gray-500 hover:text-gray-700';
+                preContent.classList.remove('hidden');
+                postContent.classList.add('hidden');
             } else {
-                document.getElementById('preTestTab').className = 'py-4 px-6 font-semibold text-gray-500 hover:text-gray-700';
-                document.getElementById('postTestTab').className = 'py-4 px-6 font-semibold text-primary border-b-2 border-primary';
-                document.getElementById('preTestContent').classList.add('hidden');
-                document.getElementById('postTestContent').classList.remove('hidden');
+                preTab.className = 'py-4 px-6 font-semibold text-gray-500 hover:text-gray-700';
+                postTab.className = 'py-4 px-6 font-semibold text-primary border-b-2 border-primary';
+                preContent.classList.add('hidden');
+                postContent.classList.remove('hidden');
             }
         }
 
         function validatePostPassword() {
             const password = document.getElementById('postPassword').value;
-            if (password === 'helm123') { // Password for demo purposes
+            if(password === 'helm123') { // Demo password
                 alert('Toegang verleend! U wordt nu doorgestuurd naar de post-test.');
-                // Redirect to post-test page
                 window.location.href = 'posttest.html';
             } else {
                 alert('Onjuiste wachtwoord. Probeer opnieuw.');
@@ -535,83 +509,190 @@
             showSection('preQuiz');
         }
 
+        // LocalStorage users management
+        function getAccounts() {
+            const accounts = localStorage.getItem('userAccounts');
+            return accounts ? JSON.parse(accounts) : [];
+        }
+
+        function saveAccounts(accounts) {
+            localStorage.setItem('userAccounts', JSON.stringify(accounts));
+        }
+
+        // Show login modal and reset to login form
         function showLogin() {
-            document.getElementById('loginModal').classList.remove('hidden');
+            const modal = document.getElementById('loginModal');
+            modal.classList.remove('hidden');
+            switchToLogin();
         }
 
         function closeModal() {
             document.getElementById('loginModal').classList.add('hidden');
         }
 
-        // Sluit modal wanneer er buiten geklikt wordt
+        // Switch modal form to registration form
+        function switchToRegister() {
+            const container = document.getElementById('formContainer');
+            const title = document.getElementById('modalTitle');
+            title.textContent = 'Nieuwe Gebruiker Registreren';
+
+            container.innerHTML = `
+                <form id="signupForm" class="space-y-4">
+                    <div>
+                        <label for="signupEmail" class="block text-sm font-medium text-gray-700 mb-1">E-mail Adres</label>
+                        <input type="email" id="signupEmail" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary" placeholder="jouw@email.com" required />
+                    </div>
+                    <div>
+                        <label for="signupPhone" class="block text-sm font-medium text-gray-700 mb-1">Telefoon Nummer</label>
+                        <input type="tel" id="signupPhone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary" placeholder="+32 4XX XXX XXX" required />
+                    </div>
+                    <div>
+                        <label for="signupPassword" class="block text-sm font-medium text-gray-700 mb-1">Wachtwoord</label>
+                        <input type="password" id="signupPassword" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary" placeholder="••••••••" required />
+                    </div>
+                    <button type="submit" class="w-full bg-primary hover:bg-secondary text-white font-semibold py-3 px-4 rounded-lg transition duration-300">Registreren</button>
+                </form>
+                <p class="text-center text-sm text-gray-600 mt-4">
+                    Heb je al een account?
+                    <button onclick="switchToLogin()" class="text-primary hover:text-secondary font-medium ml-1">Inloggen</button>
+                </p>
+            `;
+
+            document.getElementById('signupForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                const email = document.getElementById('signupEmail').value.trim();
+                const phone = document.getElementById('signupPhone').value.trim();
+                const password = document.getElementById('signupPassword').value;
+
+                if(!email || !phone || !password) {
+                    alert('Vul alle velden in.');
+                    return;
+                }
+                // Belgian phone number validation (simple)
+                if(!/^(?:\+32\s?4\d{2}\s?\d{3}\s?\d{3}|\+32\s?4\d{8})$/.test(phone)) {
+                    alert("Voer een geldig Belgisch telefoonnummer in (bijv. +32 4XX XXX XXX)");
+                    return;
+                }
+                const accounts = getAccounts();
+                if(accounts.some(acc => acc.email.toLowerCase() === email.toLowerCase() || acc.phone === phone)) {
+                    alert('Account bestaat al met dit e-mailadres of telefoonnummer.');
+                    return;
+                }
+
+                accounts.push({ email, phone, password });
+                saveAccounts(accounts);
+
+                showNotification('Registratie succesvol! Je kunt nu inloggen.', 'success');
+                switchToLogin();
+            });
+        }
+
+        // Switch modal form to login form
+        function switchToLogin() {
+            const container = document.getElementById('formContainer');
+            const title = document.getElementById('modalTitle');
+            title.textContent = 'Gebruikers Login';
+
+            container.innerHTML = `
+                <form id="loginForm" class="space-y-4">
+                    <div>
+                        <label for="loginEmail" class="block text-sm font-medium text-gray-700 mb-1">E-mail Adres</label>
+                        <input type="email" id="loginEmail" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary" placeholder="jouw@email.com" required />
+                    </div>
+                    <div>
+                        <label for="loginPassword" class="block text-sm font-medium text-gray-700 mb-1">Wachtwoord</label>
+                        <input type="password" id="loginPassword" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary" placeholder="••••••••" required />
+                    </div>
+                    <button type="submit" class="w-full bg-primary hover:bg-secondary text-white font-semibold py-3 px-4 rounded-lg transition duration-300">Inloggen</button>
+                </form>
+                <p class="text-center text-sm text-gray-600 mt-4">
+                    Geen account?
+                    <button onclick="switchToRegister()" class="text-primary hover:text-secondary font-medium ml-1">Registreren</button>
+                </p>
+            `;
+
+            document.getElementById('loginForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                const email = document.getElementById('loginEmail').value.trim();
+                const password = document.getElementById('loginPassword').value;
+
+                if(!email || !password) {
+                    alert('Vul alle velden in.');
+                    return;
+                }
+                const accounts = getAccounts();
+                const user = accounts.find(acc => acc.email.toLowerCase() === email.toLowerCase());
+                if(!user) {
+                    alert('Gebruiker niet gevonden.');
+                    return;
+                }
+                if(user.password !== password) {
+                    alert('Onjuist wachtwoord.');
+                    return;
+                }
+
+                isLoggedIn = true;
+                updateLoginButton(user.email);
+                showNotification(`Welkom terug, ${email}! Je bent ingelogd.`, 'success');
+                closeModal();
+            });
+        }
+
+        // Update login button depending on login state
+        function updateLoginButton(userEmail = '') {
+            const loginBtn = document.getElementById('loginBtn');
+            if(isLoggedIn) {
+                loginBtn.innerHTML = `<i class="fas fa-sign-out-alt mr-1"></i>Uitloggen (${userEmail})`;
+                loginBtn.onclick = logout;
+            } else {
+                loginBtn.innerHTML = `<i class="fas fa-sign-in-alt mr-1"></i>Inloggen`;
+                loginBtn.onclick = showLogin;
+            }
+        }
+
+        function logout() {
+            if(confirm('Weet je zeker dat je wilt uitloggen?')) {
+                isLoggedIn = false;
+                updateLoginButton();
+                showNotification('Je bent uitgelogd.', 'success');
+            }
+        }
+
+        // Quiz form submission (for demo just alert answers)
+        document.addEventListener('DOMContentLoaded', () => {
+            showSection('home');
+            updateLoginButton();
+
+            // Prevent duplicate event listeners: wait till login modal form is rendered
+            // So call switchToLogin once on modal creation
+            // To initialize event listener on login form submit
+            // Since modal is initially hidden, let's pre-init modal to login
+            switchToLogin();
+
+            // Quiz form submission
+            const quizForm = document.getElementById('quizForm');
+            if(quizForm) {
+                quizForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const formData = new FormData(quizForm);
+                    // For demonstration, just alert answers
+                    let answers = [];
+                    for(let q = 1; q <= 3; q++) {
+                        const ans = formData.get('q' + q);
+                        answers.push(`Vraag ${q}: Antwoord ${ans || 'niet beantwoord'}`);
+                    }
+                    alert("Je antwoorden:\n" + answers.join('\n'));
+                });
+            }
+        });
+
+        // Close modal on clicking outside content
         window.onclick = function(event) {
             const modal = document.getElementById('loginModal');
-            if (event.target === modal) {
+            if(event.target === modal) {
                 closeModal();
             }
-        }
-
-        // Toggle login state
-        document.getElementById('signupForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const email = document.getElementById('signupEmail').value;
-            const phone = document.getElementById('signupPhone').value;
-            const password = document.getElementById('signupPassword').value;
-            
-            // Validate phone number format (simple validation)
-            if (!phone || !/^(\+32\s?4\d{8}|\+32\d{9})$/.test(phone)) {
-                alert("Voer een geldig Belgisch telefoonnummer in (bijv. +32 4XX XXX XXX)");
-                return;
-            }
-            
-            // Send WhatsApp message
-            sendWhatsAppMessage(phone);
-            
-            // Simulate successful signup
-            showNotification("Bedankt voor het registreren! Je ontvangt een WhatsApp bericht.", 'success');
-            isLoggedIn = true;
-            closeModal();
-        });
-
-        function sendWhatsAppMessage(phone) {
-            // In a real implementation, you would integrate with a WhatsApp API service.
-            // For this example, we'll simulate sending by showing an alert.
-            const message = "Bedankt om mee te doen aan helm-heroes!";
-            
-            // Show confirmation to user
-            console.log(`WhatsApp bericht verzonden naar ${phone}: "${message}"`);
-            
-            // Show notification
-            showNotification(`WhatsApp bericht verzonden naar ${phone}: "${message}"`, 'success');
-        }
-
-        function connectWhatsApp() {
-            const phone = document.getElementById('whatsappNumber').value;
-            
-            if (!phone || !/^(\+32\s?4\d{8}|\+32\d{9})$/.test(phone)) {
-                alert("Voer een geldig Belgisch telefoonnummer in (bijv. +32 4XX XXX XXX)");
-                return;
-            }
-            
-            showNotification("WhatsApp verbinding geactiveerd! Je ontvangt nu meldingen.", 'success');
-        }
-
-        // Function to download files
-        function downloadFile(filename) {
-            // Create a temporary link element
-            const link = document.createElement('a');
-            link.href = '#'; // This would normally be your file URL
-            link.download = filename;
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-        }
-
-        // Initialize with home visible
-        document.addEventListener('DOMContentLoaded', function() {
-            showSection('home');
-        });
+        };
     </script>
 </body>
 </html>
